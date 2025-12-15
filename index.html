@@ -3,19 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JoshTeck Company | Home</title>
     <link rel="stylesheet" href="contact/style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>Hello, World!</h1>
-    <p>This is a sample HTML document.</p>
-    <img src="images/joshteckcompany.png" alt="JoshTeck Company Logo" />
+    <header class="site-header">
+      <div class="brand">
+        <img src="images/joshteckcompany.png" alt="JoshTeck Company logo" />
+        <div>
+          <p class="eyebrow">JoshTeck Company</p>
+          <p class="tagline">Simple solutions for small teams.</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <nav>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact/contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-pressed="false">
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Welcome</p>
+        <h1>Web experiences built with care.</h1>
+        <p>
+          We're building a home for every page in the JoshTeck network. Explore
+          to learn what we do, where we came from, and how to reach us.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="about.html">Meet the team</a>
+          <a class="button ghost" href="contact/contact.html">Work with us</a>
+        </div>
+      </section>
+
+      <section class="card-grid" aria-label="Site highlights">
+        <article class="card">
+          <p class="eyebrow">Start here</p>
+          <h2>About our story</h2>
+          <p>
+            Learn how JoshTeck Company got started and the values that guide our
+            projects.
+          </p>
+          <a href="about.html">Read the about page →</a>
+        </article>
+        <article class="card">
+          <p class="eyebrow">Stay in touch</p>
+          <h2>Contact information</h2>
+          <p>
+            Send us a note, ask for help, or book time to chat about your next
+            idea.
+          </p>
+          <a href="contact/contact.html">Open the contact page →</a>
+        </article>
+        <article class="card">
+          <p class="eyebrow">Quick view</p>
+          <h2>Why we build</h2>
+          <p>
+            We believe the web should be approachable. Every page here stays
+            fast, accessible, and easy to maintain.
+          </p>
+          <a href="about.html#values">See our values →</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <p class="eyebrow">JoshTeck Company</p>
+          <p class="tagline">Simple solutions for small teams.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact/contact.html">Contact</a>
+        </nav>
+      </div>
+      <p class="legal">
+        © <span id="year"></span> JoshTeck Company. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+    <script>
+      // Keep the copyright year fresh.
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

@@ -3,19 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>JoshTeck Company | About</title>
     <link rel="stylesheet" href="contact/style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>About Us</h1>
-    <p>This is the about page.</p>
-    <img src="images/joshteckcompany.png" alt="JoshTeck Company Logo" />
+    <header class="site-header">
+      <div class="brand">
+        <img src="images/joshteckcompany.png" alt="JoshTeck Company logo" />
+        <div>
+          <p class="eyebrow">JoshTeck Company</p>
+          <p class="tagline">Simple solutions for small teams.</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="contact/contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-pressed="false">
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-heading">
+        <p class="eyebrow">Our story</p>
+        <h1>Rooted in curiosity, driven by clarity.</h1>
+        <p>
+          JoshTeck Company began as a weekend experiment and quickly grew into a
+          collection of thoughtful web pages. Every release aims to make the
+          internet easier for the next visitor.
+        </p>
+      </section>
+
+      <section class="split-layout">
+        <article>
+          <h2>Where we started</h2>
+          <p>
+            We launched the first JoshTeck page to help friends showcase their
+            work online. The positive feedback inspired us to continue building,
+            reusing components, and sharing what we learned.
+          </p>
+        </article>
+        <article>
+          <h2>Where we're going</h2>
+          <p>
+            Today, the focus is on lightweight, maintainable sites that anyone
+            can run. This refactor brings all of our pages together so you can
+            browse them without losing context.
+          </p>
+        </article>
+      </section>
+
+      <section id="values" class="highlight-list">
+        <h2>Values we reference daily</h2>
+        <ul>
+          <li><strong>Clarity first:</strong> copy and layouts stay simple.</li>
+          <li><strong>Consistency:</strong> shared components keep pages aligned.</li>
+          <li><strong>Care:</strong> every visitor should feel at home.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <p class="eyebrow">JoshTeck Company</p>
+          <p class="tagline">Simple solutions for small teams.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="contact/contact.html">Contact</a>
+        </nav>
+      </div>
+      <p class="legal">© <span id="year"></span> JoshTeck Company.</p>
+    </footer>
+
+    <script src="theme.js" defer></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
